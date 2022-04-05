@@ -6,8 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+   <!-- <TextView
+        android:id="@+id/myTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Search "
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
@@ -25,6 +25,70 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/myTextView" />
 
+    <Button
+        android:id="@+id/magicButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#00BCD4"
+        android:text="Button"
+        app:layout_constraintBottom_toTopOf="@+id/myTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/magicTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFC107"
+        android:text="TextView"
+        android:textColor="#E42315"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/magicButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />-->
+
+   <TextView
+       android:id="@+id/numbersResult"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="100dp"
+       android:text="324 and 24"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.498"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/addButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:text="ADD"
+       app:layout_constraintEnd_toEndOf="@+id/numbersResult"
+       app:layout_constraintStart_toStartOf="@+id/numbersResult"
+       app:layout_constraintTop_toBottomOf="@+id/numbersResult" />
+
+   <Button
+       android:id="@+id/subtractButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:text="Subtract"
+       app:layout_constraintEnd_toEndOf="@+id/addButton"
+       app:layout_constraintStart_toStartOf="@+id/addButton"
+       app:layout_constraintTop_toBottomOf="@+id/addButton" />
+
+   <Button
+       android:id="@+id/multiplyButton"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:text="Multiply"
+       app:layout_constraintEnd_toEndOf="@+id/subtractButton"
+       app:layout_constraintStart_toStartOf="@+id/subtractButton"
+       app:layout_constraintTop_toBottomOf="@+id/subtractButton" />
 </androidx.constraintlayout.widget.ConstraintLayout>
