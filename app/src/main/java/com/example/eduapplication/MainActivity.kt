@@ -33,8 +33,8 @@ class MainActivity : AppCompatActivity() {
         Log.d("MylogMAct", "onRestart")
     }*/
     lateinit var bindingClass: ActivityMainBinding
-    var numberX:Int = 324
-    var numberY:Int = 24
+/*    var numberX:Int = 324
+    var numberY:Int = 24*/
     override fun onCreate(myArg: Bundle?){
         super.onCreate(myArg)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 /*        bindingClass.magicButton.setOnClickListener{
             bindingClass.magicTextView.visibility = View.GONE
         }*/
-        bindingClass.addButton.setOnClickListener{
+/*        bindingClass.addButton.setOnClickListener{
             val result = numberX + numberY
             bindingClass.numbersResult.text = "Result ADD = $result"
         }
@@ -53,6 +53,23 @@ class MainActivity : AppCompatActivity() {
         bindingClass.multiplyButton.setOnClickListener{
             val result = numberX * numberY
             bindingClass.numbersResult.text = "Result Multiply = $result"
+        }*/
+        bindingClass.buttonResult.setOnClickListener {
+            val result = bindingClass.InputNumber.text.toString().toInt()
+            when(result){
+                in 0..1000 -> {
+                    bindingClass.textResult.visibility = View.VISIBLE
+                    bindingClass.textResult.text = "Begginer"
+                }
+                in 0..100000 ->{
+                    bindingClass.textResult.visibility = View.VISIBLE
+                    bindingClass.textResult.text = "Advanced"
+                }
+                    else -> {
+                        bindingClass.textResult.visibility = View.VISIBLE
+                        bindingClass.textResult.text = "Super Star"
+                    }
+            }
         }
     }
 }

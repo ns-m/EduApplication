@@ -51,7 +51,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />-->
 
-   <TextView
+<!--   <TextView
        android:id="@+id/numbersResult"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
@@ -90,5 +90,56 @@
        android:text="Multiply"
        app:layout_constraintEnd_toEndOf="@+id/subtractButton"
        app:layout_constraintStart_toStartOf="@+id/subtractButton"
-       app:layout_constraintTop_toBottomOf="@+id/subtractButton" />
+       app:layout_constraintTop_toBottomOf="@+id/subtractButton" />-->
+
+   <TextView
+       android:id="@+id/textView"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="224dp"
+       android:text="Input number of followers"
+       android:textColor="@color/purple_700"
+       android:textSize="20sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.502"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <EditText
+       android:id="@+id/InputNumber"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:ems="10"
+       android:hint="Input Number"
+       android:inputType="number"
+       android:textSize="16sp"
+       app:layout_constraintEnd_toEndOf="@+id/textView"
+       app:layout_constraintStart_toStartOf="@+id/textView"
+       app:layout_constraintTop_toBottomOf="@+id/textView"
+       tools:ignore="TouchTargetSizeCheck" />
+
+   <TextView
+       android:id="@+id/textResult"
+       android:layout_width="0dp"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:gravity="center"
+       android:text="Result"
+       android:textColor="@color/teal_200"
+       android:textSize="16sp"
+       android:visibility="gone"
+       app:layout_constraintEnd_toEndOf="@+id/InputNumber"
+       app:layout_constraintStart_toStartOf="@+id/InputNumber"
+       app:layout_constraintTop_toBottomOf="@+id/InputNumber" />
+
+   <Button
+       android:id="@+id/buttonResult"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="24dp"
+       android:text="Push"
+       app:layout_constraintEnd_toEndOf="@+id/textResult"
+       app:layout_constraintStart_toStartOf="@+id/textResult"
+       app:layout_constraintTop_toBottomOf="@+id/textResult" />
 </androidx.constraintlayout.widget.ConstraintLayout>
