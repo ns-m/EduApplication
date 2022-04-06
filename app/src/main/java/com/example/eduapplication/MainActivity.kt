@@ -74,27 +74,37 @@ class MainActivity : AppCompatActivity() {
         }*/
     bindingClass.buttonGet.setOnClickListener {
         val resultInput = bindingClass.editInputName.text.toString()
+        bindingClass.imageWorker.visibility = View.VISIBLE
         when(resultInput){
             "Ben" -> {bindingClass.textResult.visibility = View.VISIBLE
                 val dirResult = "${Constance.DIRECTOR_NAME}, get your salary - ${Constance.DIRECTOR_SALARY}"
-                bindingClass.textResult.text = if (bindingClass.editInputPin.text.toString() == Constance.DIRECTOR_PIN)
-                    dirResult
+                if (bindingClass.editInputPin.text.toString() == Constance.DIRECTOR_PIN){
+                    bindingClass.textResult.text = dirResult
+                    bindingClass.imageWorker.setImageResource(R.drawable.face_ben)
+                }
                 else
-                    Constance.ERROR_PIN
+                    bindingClass.imageWorker.setImageResource(R.drawable.face_error)
+                    bindingClass.textResult.text = Constance.ERROR_PIN
             }
             "Lee" -> {bindingClass.textResult.visibility = View.VISIBLE
                 val engResult = "${Constance.ENGEENER_NAME}, get your salary - ${Constance.ENGEENER_SALARY}"
-                bindingClass.textResult.text = if (bindingClass.editInputPin.text.toString() == Constance.ENGEENER_PIN)
-                     engResult
+                if (bindingClass.editInputPin.text.toString() == Constance.ENGEENER_PIN){
+                    bindingClass.textResult.text = engResult
+                    bindingClass.imageWorker.setImageResource(R.drawable.face_lee)
+                }
                 else
-                    Constance.ERROR_PIN
+                    bindingClass.imageWorker.setImageResource(R.drawable.face_error)
+                    bindingClass.textResult.text = Constance.ERROR_PIN
             }
             "Joe" -> {bindingClass.textResult.visibility = View.VISIBLE
                 val mangResult = "${Constance.MANAGER_NAME}, get your salary - ${Constance.MANAGER_SALARY}"
-                bindingClass.textResult.text = if (bindingClass.editInputPin.text.toString() == Constance.MANAGER_PIN)
-                     mangResult
+                if (bindingClass.editInputPin.text.toString() == Constance.MANAGER_PIN){
+                    bindingClass.textResult.text = mangResult
+                    bindingClass.imageWorker.setImageResource(R.drawable.face_joe)
+                }
                 else
-                    Constance.ERROR_PIN
+                    bindingClass.imageWorker.setImageResource(R.drawable.face_error)
+                    bindingClass.textResult.text = Constance.ERROR_PIN
             }
             else -> {
                 bindingClass.textResult.visibility = View.VISIBLE
