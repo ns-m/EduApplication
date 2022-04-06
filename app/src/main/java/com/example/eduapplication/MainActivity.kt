@@ -2,8 +2,9 @@ package com.example.eduapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+//import android.util.Log
 import android.view.View
+import com.example.eduapplication.constance.Constance
 import com.example.eduapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -54,7 +55,7 @@ class MainActivity : AppCompatActivity() {
             val result = numberX * numberY
             bindingClass.numbersResult.text = "Result Multiply = $result"
         }*/
-        bindingClass.buttonResult.setOnClickListener {
+/*        bindingClass.buttonResult.setOnClickListener {
             val result = bindingClass.InputNumber.text.toString().toInt()
             when(result){
                 in 0..1000 -> {
@@ -70,6 +71,37 @@ class MainActivity : AppCompatActivity() {
                         bindingClass.textResult.text = "Super Star"
                     }
             }
+        }*/
+    bindingClass.buttonGet.setOnClickListener {
+        val resultInput = bindingClass.editInputName.text.toString()
+        when(resultInput){
+            "Ben" -> {bindingClass.textResult.visibility = View.VISIBLE
+                val dirResult = "${Constance.DIRECTOR_NAME}, get your salary - ${Constance.DIRECTOR_SALARY}"
+                bindingClass.textResult.text = if (bindingClass.editInputPin.text.toString() == Constance.DIRECTOR_PIN)
+                    dirResult
+                else
+                    Constance.ERROR_PIN
+            }
+            "Lee" -> {bindingClass.textResult.visibility = View.VISIBLE
+                val engResult = "${Constance.ENGEENER_NAME}, get your salary - ${Constance.ENGEENER_SALARY}"
+                bindingClass.textResult.text = if (bindingClass.editInputPin.text.toString() == Constance.ENGEENER_PIN)
+                     engResult
+                else
+                    Constance.ERROR_PIN
+            }
+            "Joe" -> {bindingClass.textResult.visibility = View.VISIBLE
+                val mangResult = "${Constance.MANAGER_NAME}, get your salary - ${Constance.MANAGER_SALARY}"
+                bindingClass.textResult.text = if (bindingClass.editInputPin.text.toString() == Constance.MANAGER_PIN)
+                     mangResult
+                else
+                    Constance.ERROR_PIN
+            }
+            else -> {
+                bindingClass.textResult.visibility = View.VISIBLE
+                bindingClass.textResult.text = Constance.ERROR_WORKER
+            }
         }
+
+    }
     }
 }
