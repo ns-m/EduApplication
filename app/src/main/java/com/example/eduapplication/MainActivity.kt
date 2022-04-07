@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
                     }
             }
         }*/
-    bindingClass.buttonGet.setOnClickListener {
+    /*bindingClass.buttonGet.setOnClickListener {
         val resultInput = bindingClass.editInputName.text.toString()
         bindingClass.imageWorker.visibility = View.VISIBLE
         when(resultInput){
@@ -112,6 +112,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-    }
+    }*/
     }
 }
