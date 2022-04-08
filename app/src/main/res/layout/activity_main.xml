@@ -272,4 +272,58 @@
        app:layout_constraintEnd_toEndOf="@+id/textView7"
        app:layout_constraintStart_toStartOf="@+id/textView7"
        app:layout_constraintTop_toBottomOf="@+id/textView7" />-->
+
+<!--   <Button
+       android:id="@+id/button5"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="16dp"
+       android:onClick="onClickClose"
+       android:text="Finish"
+       app:layout_constraintEnd_toEndOf="@+id/button4"
+       app:layout_constraintStart_toStartOf="@+id/button4"
+       app:layout_constraintTop_toBottomOf="@+id/button4" />
+
+   <TextView
+       android:id="@+id/textView2"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="330dp"
+       android:text="Jump to screens"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.498"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/button4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="32dp"
+       android:onClick="onClickGoSecond"
+       android:text="Second Activity"
+       app:layout_constraintEnd_toEndOf="@+id/textView2"
+       app:layout_constraintStart_toStartOf="@+id/textView2"
+       app:layout_constraintTop_toBottomOf="@+id/textView2" />-->
+
+   <TextView
+       android:id="@+id/getAnswer"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="250dp"
+       android:text="Test send data"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/button"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="100dp"
+       android:onClick="onClickSendDataSecond"
+       android:text="Send Activity Second"
+       app:layout_constraintEnd_toEndOf="@+id/getAnswer"
+       app:layout_constraintStart_toStartOf="@+id/getAnswer"
+       app:layout_constraintTop_toBottomOf="@+id/getAnswer" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EduApplication">
         <activity
-            android:name=".TestActivity2"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,14 +21,14 @@
         <activity
             android:name=".FourthActivity"
             android:exported="false" />
-        <!--<activity
+        <activity
             android:name=".SecondActivity"
-            android:exported="false" />-->
+            android:exported="false" />
         <activity
             android:name=".ThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".TestActivity2"
             android:exported="false"/>
 
 

@@ -1,5 +1,6 @@
 package com.example.eduapplication
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 //import android.util.Log
@@ -40,6 +41,29 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(myArg)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
         setContentView(bindingClass.root)
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+        if (requestCode == 100 && resultCode == RESULT_OK && data != null){
+            bindingClass.getAnswer?.text = data.getStringExtra("keySendAnsw")
+        }
+
+    }
+
+    fun onClickSendDataSecond(view: View){
+        val secondActivity = Intent(this, SecondActivity::class.java)
+        secondActivity.putExtra("keySend", "What is your name?")
+        startActivityForResult(secondActivity, 100)
+    }
+/*    fun onClickGoSecond(view: View){
+        val intent = Intent(this, SecondActivity::class.java)
+        startActivity(intent)
+    }
+    fun onClickClose(view: View){
+        finish()
+    }*/
+
 /*        bindingClass.magicButton.setOnClickListener{
             bindingClass.magicTextView.visibility = View.GONE
         }*/
@@ -113,5 +137,5 @@ class MainActivity : AppCompatActivity() {
         }
 
     }*/
-    }
+
 }
