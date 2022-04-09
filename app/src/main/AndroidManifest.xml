@@ -10,13 +10,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.EduApplication">
         <activity
-            android:name=".SingActivity"
+            android:name=".SignActivity"
             android:exported="false" />
+        <!--<activity
+            android:name=".MainActivityBeforeLesson18"
+            android:exported="false" />-->
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MainActivityBeforeLesson18"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

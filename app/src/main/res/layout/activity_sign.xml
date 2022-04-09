@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SingActivity">
+    tools:context=".SignActivity">
 
     <ImageView
         android:id="@+id/avatarView"
@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="64dp"
+        android:onClick="onClickAvatar"
         android:text="@string/avatar"
         android:visibility="visible"
         app:layout_constraintStart_toEndOf="@+id/avatarView"
@@ -38,7 +39,8 @@
         android:hint="@string/login"
         android:inputType="textPersonName"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/avatarView" />
+        app:layout_constraintTop_toBottomOf="@+id/avatarView"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/editTextPassword"
@@ -50,7 +52,8 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/editTextLogin"
         app:layout_constraintStart_toStartOf="@+id/editTextLogin"
-        app:layout_constraintTop_toBottomOf="@+id/editTextLogin" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextLogin"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/editTextName"
@@ -63,7 +66,8 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextPassword"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/editTextSecName"
@@ -76,7 +80,8 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/editTextName"
         app:layout_constraintStart_toStartOf="@+id/editTextName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextName"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/editTextMidName"
@@ -89,13 +94,15 @@
         android:visibility="visible"
         app:layout_constraintEnd_toEndOf="@+id/editTextSecName"
         app:layout_constraintStart_toStartOf="@+id/editTextSecName"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSecName" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSecName"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <Button
         android:id="@+id/buttonDone"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
+        android:onClick="onClickDone"
         android:text="@string/done"
         app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextPassword"

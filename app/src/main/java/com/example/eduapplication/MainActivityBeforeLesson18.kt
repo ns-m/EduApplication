@@ -1,3 +1,4 @@
+package com.example.eduapplication/*
 package com.example.eduapplication
 
 import android.content.Intent
@@ -9,6 +10,7 @@ import com.example.eduapplication.constance.Constance
 import com.example.eduapplication.databinding.ActivityMainBinding
 
 class MainActivityBeforeLesson18 : AppCompatActivity() {
+*/
 /*    override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,10 +35,13 @@ class MainActivityBeforeLesson18 : AppCompatActivity() {
     override fun onRestart() {
         super.onRestart()
         Log.d("MylogMAct", "onRestart")
-    }*/
+    }*//*
+
     lateinit var bindingClass: ActivityMainBinding
+*/
 /*    var numberX:Int = 324
-    var numberY:Int = 24*/
+    var numberY:Int = 24*//*
+
     override fun onCreate(myArg: Bundle?){
         super.onCreate(myArg)
         bindingClass = ActivityMainBinding.inflate(layoutInflater)
@@ -56,17 +61,22 @@ class MainActivityBeforeLesson18 : AppCompatActivity() {
         secondActivity.putExtra("keySend", "What is your name?")
         startActivityForResult(secondActivity, 100)
     }
+*/
 /*    fun onClickGoSecond(view: View){
         val intent = Intent(this, SecondActivity::class.java)
         startActivity(intent)
     }
     fun onClickClose(view: View){
         finish()
-    }*/
+    }*//*
 
+
+*/
 /*        bindingClass.magicButton.setOnClickListener{
             bindingClass.magicTextView.visibility = View.GONE
-        }*/
+        }*//*
+
+*/
 /*        bindingClass.addButton.setOnClickListener{
             val result = numberX + numberY
             bindingClass.numbersResult.text = "Result ADD = $result"
@@ -78,7 +88,9 @@ class MainActivityBeforeLesson18 : AppCompatActivity() {
         bindingClass.multiplyButton.setOnClickListener{
             val result = numberX * numberY
             bindingClass.numbersResult.text = "Result Multiply = $result"
-        }*/
+        }*//*
+
+*/
 /*        bindingClass.buttonResult.setOnClickListener {
             val result = bindingClass.InputNumber.text.toString().toInt()
             when(result){
@@ -95,8 +107,10 @@ class MainActivityBeforeLesson18 : AppCompatActivity() {
                         bindingClass.textResult.text = "Super Star"
                     }
             }
-        }*/
-    /*bindingClass.buttonGet.setOnClickListener {
+        }*//*
+
+    */
+/*bindingClass.buttonGet.setOnClickListener {
         val resultInput = bindingClass.editInputName.text.toString()
         bindingClass.imageWorker.visibility = View.VISIBLE
         when(resultInput){
@@ -136,6 +150,7 @@ class MainActivityBeforeLesson18 : AppCompatActivity() {
             }
         }
 
-    }*/
+    }*//*
 
-}
+
+}*/
