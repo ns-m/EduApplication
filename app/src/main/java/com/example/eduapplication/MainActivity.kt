@@ -23,9 +23,26 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == Constance.REQUEST_CODE_SIGN_IN){
-
+            val logn = data?.getStringExtra(Constance.LOGIN)
+            val pwd = data?.getStringExtra(Constance.PASSWORD)
+            if (logn == logn && password == pwd){
+                bindingClass.imgAvatar.setImageResource(avatarImgId)
+                val txtInfo = "$name $secondName $middleName"
+                bindingClass.textInfo.text = txtInfo
+            }else {
+                bindingClass.imgAvatar.setImageResource(R.drawable.face_error)
+                bindingClass.textInfo.text = Constance.ERROR_SIGN_IN
+            }
         }else if (requestCode == Constance.REQUEST_CODE_SIGN_UP){
-
+            login = data?.getStringExtra(Constance.LOGIN)!!
+            password = data.getStringExtra(Constance.PASSWORD)!!
+            name = data.getStringExtra(Constance.NAME)!!
+            secondName = data.getStringExtra(Constance.NAME_SECOND)!!
+            middleName = data.getStringExtra(Constance.NAME_MIDDLE)!!
+            avatarImgId = data.getIntExtra(Constance.AVATAR_ID, 0)
+            bindingClass.imgAvatar.setImageResource(avatarImgId)
+            val txtInfo = "$name $secondName $middleName"
+            bindingClass.textInfo.text = txtInfo
         }
     }
     fun onClickSingIn(view: View){
