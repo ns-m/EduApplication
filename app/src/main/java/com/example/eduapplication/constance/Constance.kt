@@ -26,4 +26,5 @@ object Constance {
     const val NAME_SECOND = "name_second"
     const val NAME_MIDDLE = "name_middle"
     const val ERROR_SIGN_IN = "Wrong user!"
+    const val BUTTON_EXIT = "Logout"
 }
