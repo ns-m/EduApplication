@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">EduApplication</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="hello">Gutentag</string>
+</resources>
