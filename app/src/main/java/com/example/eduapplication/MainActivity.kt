@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 }*/
-class MainActivity : AppCompatActivity() {
+/*class MainActivity : AppCompatActivity() {
     val bad = 0..3
     val normal = 4..6
     val nice = 7..9
@@ -47,4 +47,9 @@ class MainActivity : AppCompatActivity() {
         niceArray.forEach { Log.d("MyActLog", it) }
         excellentArray.forEach { Log.d("MyActLog", it) }
     }
+}*/
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)}
 }
